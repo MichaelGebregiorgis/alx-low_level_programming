@@ -12,7 +12,7 @@ int main(void)
 {
 	char az = 'a';
 
-	while (az != e && az != q)
+	while (az != 'e' && az != 'q')
 	{
 		putchar(az);
 		az++;
