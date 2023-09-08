@@ -3,7 +3,6 @@
 #include <stdio.h>
 
 /**
- *
  * main - Check the last digit of n
  *
  * Return: Always 0 (Success)
@@ -24,9 +23,9 @@ int main(void)
 	{
 		printf("Last digit of %d is %d and is 0\n", n, lastDigit);
 	}
-	else if (lastDigit < 6 && lastDigit != 0)
+	else
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastDigit);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10);
 	}
 	return (0);
 }
