@@ -11,7 +11,8 @@
 int main(void)
 {
 	int i;
-	int j += i;
+	int j;
+	j += i;
 
 	for (i = '0'; i <= '8'; i++)
 	{
