@@ -30,14 +30,14 @@ void times_table(void)
 			}
 
 			if (j < 10)
-                                {
-                                        _putchar(',');
-                                        _putchar(' ');
-                                }
-                                else
-                                {
-                                        _putchar('\n');
-                                }
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			else
+			{
+				_putchar('\n');
+			}
 		}
 	}
 }
