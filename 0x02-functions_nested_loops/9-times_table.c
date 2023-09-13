@@ -19,5 +19,6 @@ void times_table(void)
 			_putchar(' ');
 		}
 	}
+	return (0);
 }
 
