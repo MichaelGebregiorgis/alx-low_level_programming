@@ -21,8 +21,9 @@ void times_table(void)
 			{
 				k = mul % 10;
 				l = (mul - k) / 10;
-				_putchar(l + '0');
-				_putchar(k + '0');
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 			}
 			else
 			{
