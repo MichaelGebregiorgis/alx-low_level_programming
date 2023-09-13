@@ -23,7 +23,8 @@ void times_table(void)
 				l = (mul - k) / 10;
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
+				_putchar(l + '0');
+				_putchar(k + '0');
 			}
 			else
 			{
