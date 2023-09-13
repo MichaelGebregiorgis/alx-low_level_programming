@@ -5,11 +5,11 @@
 /**
  * _abs - Compute absolute values
  *
- * @num: data type
+ * @n: data type
  * Return: 0
  */
 
-int _abs(int num)
+int _abs(int n)
 {
 	int absval;
 
