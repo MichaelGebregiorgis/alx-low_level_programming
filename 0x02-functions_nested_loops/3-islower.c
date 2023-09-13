@@ -2,7 +2,7 @@
 #include <ctype.h>
 /**
  * _islower - chaecks if the value is in lowercase
- *
+ *@c: data type
  * Return: 0
  */
 
