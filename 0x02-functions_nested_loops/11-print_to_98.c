@@ -18,10 +18,10 @@ void print_to_98(int n)
 	}
 	else
 	{
-		n;
+		n = n;
 	}
 	_putchar(n / 10 + '0');
-	_putchar(h % 10 + '0');
+	_putchar(n % 10 + '0');
 	_putchar(',');
 	_putchar(' ');
 }
