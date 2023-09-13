@@ -16,7 +16,12 @@ void print_to_98(int n)
 	{
 		n++;
 	}
-	return (n);
+	else
+	{
+		n;
+	}
+	_putchar(n / 10 + '0');
+	_putchar(h % 10 + '0');
 	_putchar(',');
 	_putchar(' ');
 }
