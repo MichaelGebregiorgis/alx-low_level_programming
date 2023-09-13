@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * _abs - Compute absolute values
@@ -10,8 +11,9 @@
 
 int _abs(int num)
 {
-	int asbval;
+	int absval;
 
 	absval = abs(num);
 	_putchar(absval);
+	return (0);
 }
