@@ -18,12 +18,12 @@ int main(void)
 	i = 0;
 	sum = 0;
 
-	printf("%d", num1);
-	printf("%d", num2);
+	printf("%ld", num1);
+	printf("%ld", num2);
 	while (i < 50)
 	{
 		sum = num1 + num2;
-		printf("%d", sum);
+		printf("%ld", sum);
 		num1 = num2;
 		num2 = sum;
 		if (i < 49)
