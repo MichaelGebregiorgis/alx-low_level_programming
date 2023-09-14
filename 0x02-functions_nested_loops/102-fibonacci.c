@@ -15,11 +15,13 @@ int main(void)
 
 	num1 = 1;
 	num2 = 2;
-	i = 0;
+	i = 2;
 	sum = 0;
 
 	printf("%ld", num1);
+	printf(", ");
 	printf("%ld", num2);
+	printf(", ");
 	while (i < 50)
 	{
 		sum = num1 + num2;
