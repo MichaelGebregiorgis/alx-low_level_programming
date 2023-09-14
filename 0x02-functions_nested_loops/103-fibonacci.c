@@ -22,6 +22,6 @@ int main(void)
 		num1 = num2;
 		num2 = i;
 	}
-	printf("%ld", sum);
+	printf("%f", sum);
 	return (0);
 }
