@@ -2,7 +2,7 @@
 
 /**
  * positive_or_negative - checks if the number is positive, negative or zero
- * 
+ *
  * @i: data type
  *
  * Return: 0
