@@ -9,7 +9,6 @@
 int main(void)
 {
 	int sum;
-	int num;
 	int i;
 
 	sum = 0;
@@ -23,4 +22,5 @@ int main(void)
 		i++;
 	}
 	printf("%d\n", sum);
+	return (0);
 }
