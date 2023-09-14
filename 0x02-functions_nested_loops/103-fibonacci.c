@@ -8,20 +8,26 @@
 
 int main(void)
 {
-	float num1 = 0, num2 = 1;
-	float sum;
-	int i;
+	long num1 = 0, num2 = 1;
+	long sum;
+	long result;
 
-	i = num1 + num2;
-	while (sum <= 4000000)
+	while (1)
 	{
-		if (i % 2 == 0)
+		sum = num1 + num2;
+
+		if (sum % 2 == 0)
 		{
-			sum = sum + i;
+			result = result + sum;
 		}
+		else if (sum > 4000000)
+		{
+			break;
+		}
+
 		num1 = num2;
-		num2 = i;
+		num2 = sum;
 	}
-	printf("%f", sum);
+	printf("%ld\n", result);
 	return (0);
 }
