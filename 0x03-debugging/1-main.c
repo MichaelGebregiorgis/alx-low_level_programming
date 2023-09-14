@@ -2,7 +2,6 @@
 
 /**
  * main - causes an infinitr loop
- *
  * Return: 0
  */
 
