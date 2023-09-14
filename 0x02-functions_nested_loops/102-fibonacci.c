@@ -20,8 +20,8 @@ int main(void)
 
 	while (i < 50)
 	{
-		sum = num1 + num2;
 		printf("%d", sum);
+		sum = num1 + num2;
 		num1 = num2;
 		num2 = sum;
 		if (i < 49)
