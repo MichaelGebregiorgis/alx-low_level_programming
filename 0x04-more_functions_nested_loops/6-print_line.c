@@ -14,7 +14,7 @@ void print_line(int n)
 
 	if (n > 0)
 	{
-		for (iTimes = 0; i <= n; i++)
+		for (iTimes = 1; iTimes <= n; iTimes++)
 		{
 			_putchar('_');
 		}
