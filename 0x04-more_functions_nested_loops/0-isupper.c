@@ -1,6 +1,5 @@
 #include "main.h"
 #include <ctype.h>
-
 /**
  * _isupper - Checks if the input is uppercase or not
  *
@@ -11,8 +10,5 @@
 
 int _isupper(int c)
 {
-	_putchar(c);
-	_putchar(':');
-	_putchar(' ');
-	_putchar(isupper(c));
+	return (isupper(c));
 }
