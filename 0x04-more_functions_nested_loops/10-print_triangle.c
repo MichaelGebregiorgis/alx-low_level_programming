@@ -13,15 +13,13 @@ void print_triangle(int size)
 	int gap;
 	int tri;
 	int lines;
-	int val;
 
 	tri = 1;
 	if (size > 0)
 	{
 		for (lines = 1; lines <= size; lines++)
 		{
-			val = size - lines;
-			for (gap = val; gap >= 1; gap--)
+			for (gap = size - lines; gap >= 1; gap--)
 			{
 				_putchar(' ');
 			}
@@ -30,6 +28,7 @@ void print_triangle(int size)
 				_putchar('#');
 				tri++;
 			}
+			tri = 1;
 			_putchar('\n');
 		}
 	}
