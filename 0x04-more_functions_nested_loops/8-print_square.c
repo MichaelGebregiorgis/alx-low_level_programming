@@ -13,6 +13,9 @@ void print_square(int size)
 	int lines;
 	int nSize;
 
+	lines = 1;
+	nSize = 0;
+
 	while (lines <= size)
 	{
 		while (nSize <= size)
