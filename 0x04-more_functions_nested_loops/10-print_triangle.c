@@ -15,11 +15,12 @@ void print_triangle(int size)
 	int lines;
 	int val;
 
+	tri = 1;
 	if (size > 0)
 	{
-		for (lines = 1; lines <= size)
+		for (lines = 1; lines <= size; lines++)
 		{
-			val = size - row;
+			val = size - lines;
 			for (gap = val; gap >= 1; gap--)
 			{
 				_putchar(' ');
