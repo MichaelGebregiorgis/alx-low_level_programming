@@ -4,7 +4,7 @@
  * mul - multiplies two integers
  *
  * @a: Data type
- * 
+ *
  * @b: Data type
  *
  * Return: 0
