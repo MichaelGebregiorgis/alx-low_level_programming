@@ -16,9 +16,11 @@ void print_square(int size)
 	lines = 1;
 	nSize = 1;
 
-	while (lines <= size)
+	if (size > 0)
 	{
-		while (nSize <= size)
+		while (lines <= size)
+		{
+			while (nSize <= size)
 		{
 			_putchar('#');
 			nSize++;
@@ -26,5 +28,10 @@ void print_square(int size)
 		_putchar('\n');
 		lines++;
 		nSize = 1;
+		}
+	}
+	else
+	{
+		_putchar('\n');
 	}
 }
