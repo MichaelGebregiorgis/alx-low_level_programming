@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _puts - Print string using putchar
@@ -11,9 +10,9 @@
 
 void _puts(char *str)
 {
-	long unsigned int i;
+	int i;
 
-	for (i = 0; i <= strlen(*str); i++)
+	for (; *str[i] != '\0';)
 	{
 		_putchar(*str[i]);
 	}
