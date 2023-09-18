@@ -2,8 +2,8 @@
 
 /**
  * reset_to_98 - take pointer to an int as parameter and update it
- * 
- * @*n: Data type
+ *
+ * @n: Data type
  *
  */
 
