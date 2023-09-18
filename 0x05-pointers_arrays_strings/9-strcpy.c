@@ -5,7 +5,7 @@
  *
  * @src: Data type
  *
- * @deat: Data type
+ * @dest: Data type
  *
  * Return: 0
  */
