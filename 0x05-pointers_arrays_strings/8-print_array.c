@@ -27,7 +27,7 @@ void print_array(int *a, int n)
 		{
 			printf("%d", a[txt]);
 		}
-		printf("\n");
 		txt++;
 	}
+	printf("\n");
 }
