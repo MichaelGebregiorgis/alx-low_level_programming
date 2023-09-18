@@ -10,5 +10,7 @@
 
 void _puts(char *str)
 {
-	puts(*str);
+	char text[] = *str;
+
+	puts(text);
 }
