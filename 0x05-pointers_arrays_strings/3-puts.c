@@ -11,7 +11,7 @@
 
 void _puts(char *str)
 {
-	int i;
+	long unsigned int i;
 
 	for (i = 0; i <= strlen(str); i++)
 	{
