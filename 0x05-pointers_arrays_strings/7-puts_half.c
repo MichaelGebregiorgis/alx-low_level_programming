@@ -18,9 +18,9 @@ void puts_half(char *str)
 	{
 		inc++;
 	}
-	if ((inc % 2) == 0)
+	if (inc % 2 == 0)
 	{
-		j = inc;
+		j = inc / 2;
 		while (str[j] != '\0')
 		{
 			_putchar(str[j]);
