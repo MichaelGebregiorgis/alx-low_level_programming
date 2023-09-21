@@ -28,7 +28,7 @@ char *cap_string(char *c)
 		c[inc - 1] == '{' ||
 		c[inc - 1] == '}') && (c[inc] >= 'a' && c[inc] <= 'z'))
 		{
-			c[inc] = c[inc] = 32;
+			c[inc] = c[inc] - 32;
 		}
 		else if (c[0] >= 97 && c[0] <= 122)
 		{
