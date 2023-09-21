@@ -12,7 +12,7 @@ char *rot13(char *c)
 {
 	int inc = 0;
 
-	for (; c[inc] != '\0'; i++)
+	for (; c[inc] != '\0'; inc++)
 	{
 		while ((c[inc] >= 'a' && c[inc] <= 'z') ||
 				(c[inc] >= 'A' && c[inc] <= 'Z'))
