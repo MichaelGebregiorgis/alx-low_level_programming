@@ -16,7 +16,7 @@ char *leet(char *c)
 	char c1[] = "aAeEoOtTlL";
 	char c2[] = "001122334477";
 
-	for (i = 0; c[inc] != '\0'; inc++)
+	for (inc = 0; c[inc] != '\0'; inc++)
 	{
 		for (j = 0; j < 10; j++)
 		{
