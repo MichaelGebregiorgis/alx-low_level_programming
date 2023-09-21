@@ -38,7 +38,6 @@ char *cap_string(char *c)
 		{
 			c[inc] = c[inc];
 		}
-		i++;
+		inc++;
 	}
-	return (c);
-}
+
