@@ -30,7 +30,7 @@ char *cap_string(char *c)
 		{
 			c[inc] = c[inc] - 32;
 		}
-		else if (c[0] >= 97 && c[0] <= 122)
+		else if ((c[0] >= 97 && c[0] <= 122))
 		{
 			c[0] = c[0] - 32;
 		}
