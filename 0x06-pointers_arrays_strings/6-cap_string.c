@@ -41,3 +41,4 @@ char *cap_string(char *c)
 		i++;
 	}
 	return (c);
+}
