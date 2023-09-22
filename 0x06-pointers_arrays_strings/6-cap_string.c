@@ -40,4 +40,5 @@ char *cap_string(char *c)
 		}
 		inc++;
 	}
+	return (c);
 }
