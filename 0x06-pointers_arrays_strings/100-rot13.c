@@ -12,22 +12,21 @@ char *rot13(char *c)
 {
 	int inc = 0;
 	int inc2 = 0;
-
-	char az[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char nm[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char n[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (c[inc] != '\0')
 	{
-		while (az[inc2] != '\0')
+		while (a[inc2] != '\0')
 		{
-			if (c[inc] == az[inc2])
+			if (c[inc] == a[inc2])
 			{
-				c[inc] = nm[inc2];
+				c[inc] = n[inc2];
 				break;
 			}
-			inc2 += 1;
+			inc2++;
 		}
-		inc += 1;
+		inc++;
 	}
 	return (c);
 }
