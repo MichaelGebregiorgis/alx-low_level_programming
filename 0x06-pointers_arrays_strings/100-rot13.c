@@ -11,23 +11,23 @@
 char *rot13(char *c)
 {
 	int inc = 0;
+	int inc2 = 0;
 
-	for (; c[inc] != '\0'; inc++)
+	char az[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char nm[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	while (c[inc] != '\0')
 	{
-		while ((c[inc] >= 'a' && c[inc] <= 'z') ||
-				(c[inc] >= 'A' && c[inc] <= 'Z'))
+		while (az[inc2] != '\0')
 		{
-			if ((c[inc] >= 'a' && c[inc] <= 'm') ||
-					(c[inc] >= 'A' && c[inc] <= 'M'))
+			if (c[inc] == az[inc2])
 			{
-				c[inc] += 13;
+				c[inc] = nm[inc2];
+				break;
 			}
-			else
-			{
-				c[inc] -= 13;
-			}
-			inc++;
+			inc2 += 1;
 		}
+		inc += 1;
 	}
 	return (c);
 }
