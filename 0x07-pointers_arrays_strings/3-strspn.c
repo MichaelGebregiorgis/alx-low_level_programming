@@ -32,7 +32,7 @@ unsigned int _strspn(char *s, char *accept)
 				return (val);
 			}
 		}
-		s += 1;
+		s++;
 	}
 	return (val);
 }
