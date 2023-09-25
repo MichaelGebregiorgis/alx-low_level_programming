@@ -20,7 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (*s)
 	{
-		while (accept[inc])
+		for (;accept[inc]; inc++)
 		{
 			if (*s == accept[inc])
 			{
@@ -31,7 +31,6 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				return (val);
 			}
-			inc += 1;
 		}
 		s += 1;
 	}
