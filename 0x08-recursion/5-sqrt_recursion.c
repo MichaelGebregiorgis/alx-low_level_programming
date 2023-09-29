@@ -35,7 +35,7 @@ int sqrt_val(int n, int mul)
 	}
 	else if (mul * mul == n)
 	{
-		return (i);
+		return (mul);
 	}
 	return (sqrt_val(n, mul + 1));
 }
