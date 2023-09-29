@@ -14,11 +14,11 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (_sqrt_val(n, 1));
+	return (sqrt_val(n, 1));
 }
 
 /**
- * _sqrt_val - find the number
+ * sqrt_val - find the number
  *
  * @n: Data type
  *
@@ -27,7 +27,7 @@ int _sqrt_recursion(int n)
  * Return: 0
  */
 
-int _sqrt_val(int n, int mul)
+int sqrt_val(int n, int mul)
 {
 	if (mul * mul > n)
 	{
@@ -37,5 +37,5 @@ int _sqrt_val(int n, int mul)
 	{
 		return (i);
 	}
-	return (_sqrt_val(n, mul + 1));
+	return (sqrt_val(n, mul + 1));
 }
