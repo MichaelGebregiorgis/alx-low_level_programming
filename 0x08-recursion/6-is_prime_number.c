@@ -18,6 +18,16 @@ int is_prime_number(int n)
 	return (recureVal(n, n - 1));
 }
 
+/**
+ * recureVal - prime checker
+ *
+ * @n: Data type
+ *
+ * @num: Data type
+ *
+ * Return: 0
+ */
+
 int recureVal(int n, int num)
 {
 	if (num == 1)
