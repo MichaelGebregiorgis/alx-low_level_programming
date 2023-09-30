@@ -32,13 +32,11 @@ int recureVal(int n, int num)
 {
 	if (num == 1)
 	{
-		_putchar('1');
-		return;
+		return (1);
 	}
 	else if (n % num == 0 && num > 0)
 	{
-		_putchar('0');
-		return;
+		return (0);
 	}
 	return (recureVal(n, num - 1));
 }
