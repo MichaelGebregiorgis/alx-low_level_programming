@@ -1,5 +1,7 @@
 #include "main.h"
 
+int sqrt_val(int n, int mul);
+
 /**
  * _sqrt_recursion - square root of a value
  *
