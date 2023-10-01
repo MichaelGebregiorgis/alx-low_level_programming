@@ -34,13 +34,13 @@ int pointer(char *s, int i)
 {
 	if (i < 1)
 	{
-		return (1);
+		return (0);
 	}
 	if (*s == *(s + 1))
 	{
 		return (pointer(s + 1, i - 2));
 	}
-	return (0);
+	return (1);
 }
 
 /**
