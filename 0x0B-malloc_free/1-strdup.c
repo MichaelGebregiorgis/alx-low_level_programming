@@ -24,7 +24,7 @@ char *_strdup(char *str)
 		inc++;
 	}
 
-	allocate = malloc(sizeof(char) * (i + 1));
+	allocate = malloc(sizeof(char) * (inc + 1));
 
 	if (allocate == NULL)
 	{
