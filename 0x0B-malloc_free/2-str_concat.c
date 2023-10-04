@@ -40,7 +40,6 @@ char *str_concat(char *s1, char *s2)
 		free(allocate);
 		return (NULL);
 	}
-
 	while (len1 < i)
 	{
 		allocate[len1] = s1[len1];
