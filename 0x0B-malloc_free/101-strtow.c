@@ -62,7 +62,7 @@ char **strtow(char *str)
 					return (NULL);
 				while (strt < end)
 				{
-					*temp++ = str[start++];
+					*temp++ = str[strt++];
 				}
 				*temp = '\0';
 				val[inc] = temp - a;
