@@ -53,15 +53,14 @@ char **strtow(char *str)
 	while (i <= len)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
+		{
 			if (a)
 			{
 				end = i;
 				temp = malloc(sizeof(char) * (a + 1));
 				if (temp == NULL)
-				{
 					return (NULL);
-				}
-				while (start < end)
+				while (strt < end)
 				{
 					*temp++ = str[start++];
 				}
@@ -71,6 +70,7 @@ char **strtow(char *str)
 				a = 0;
 
 			}
+		}
 		else if (a++ == 0)
 		{
 			strt = i;
