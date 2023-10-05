@@ -11,11 +11,11 @@ int wordC(char *c);
 
 int wordC(char *c)
 {
-	int a = 0, inc = 0, out = 0;
+	int a = 0, inc1 = 0, out = 0;
 
-	while (c[inc] != '\0')
+	while (c[inc1] != '\0')
 	{
-		if (c[inc] == ' ')
+		if (c[inc1] == ' ')
 		{
 			a = 0;
 		}
@@ -24,7 +24,7 @@ int wordC(char *c)
 			a = 1;
 			out++;
 		}
-		inc++;
+		inc1++;
 	}
 	return (out);
 }
