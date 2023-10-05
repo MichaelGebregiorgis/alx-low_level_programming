@@ -15,7 +15,7 @@ int wordC(char *c)
 
 	while (c[inc] != '\0')
 	{
-		if (s[c] == ' ')
+		if (c[inc] == ' ')
 		{
 			a = 0;
 		}
@@ -42,7 +42,7 @@ char **strtow(char *str)
 	char **val, *temp;
 	int inc = 0, i = 0, len = 0, chars, a = 0, strt, end;
 
-	for (; *(str + len;))
+	for (; *(str + len);)
 		len++;
 	chars = wordC(str);
 	if (chars == 0)
@@ -56,7 +56,7 @@ char **strtow(char *str)
 			if (a)
 			{
 				end = i;
-				temp = malloc(sizeof(char) * (c + 1));
+				temp = malloc(sizeof(char) * (a + 1));
 				if (temp == NULL)
 				{
 					return (NULL);
@@ -73,7 +73,7 @@ char **strtow(char *str)
 			}
 		else if (a++ == 0)
 		{
-			start = i;
+			strt = i;
 		}
 		i++;
 	}
