@@ -44,7 +44,8 @@ char *argstostr(int ac, char **av)
 			b++;
 			c++;
 		}
-		val[k] = '\n';
+		val[c] = '\n';
 		c++;
 	}
 	return (val);
+}
