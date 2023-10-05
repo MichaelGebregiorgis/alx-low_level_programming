@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+int wordC(char *c);
 /**
  * wordC - counter
  *
