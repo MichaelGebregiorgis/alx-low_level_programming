@@ -13,7 +13,7 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char * val;
+	char *val;
 	unsigned int inc = 0;
 
 	if (nmemb == 0 || size == 0)
@@ -31,5 +31,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		val[inc] = 0;
 		inc++;
 	}
-	retrun (val);
+	return (val);
 }
