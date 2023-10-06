@@ -34,17 +34,17 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 	oldval = ptr;
-	if (newsize < old_size)
+	if (new_size < old_size)
 	{
 		while (inc < new_size)
 		{
-			ptr[inc] = oldval[inc];
+			val[inc] = oldval[inc];
 			inc++;
 		}
 	}
 	else if (new_size > old_size)
 	{
-		while (inc < new_size)
+		while (inc < old_size)
 		{
 			val[inc] = oldval[inc];
 			inc++;
