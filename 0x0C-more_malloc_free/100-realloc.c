@@ -11,36 +11,43 @@
  *
  * Return: 0
  */
+
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *val;
 	char *oldval;
 	unsigned int inc = 0;
 
-	if (new_size == 0)
-		free(ptr);
-		return (NULL);
-	else if (new_size == old_size)
+	if (new_size == old_size)
 	{
 		return (ptr);
 	}
-	else if (ptr == NULL)
+	if (new_size == 0 && ptr != NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	if (ptr == NULL)
 	{
 		return (malloc(new_size));
 	}
 	val = malloc(new_size);
-	if (!val)
+	if(val == NULL)
 	{
 		return (NULL);
 	}
-	oldval = ptr;
-	if (new_size > old_size)
+	if (old_size < new_size)
 	{
-		new_size = old_size;
+		oldval = old_size;
 	}
-	while (i < new_size)
+	else
 	{
-		val[inc] = oldval[inc];
+		oldval = new_size;
+	}
+	while (inc < oldval)
+	{
+		*((char *)val + 1) = *((char *)ptr + inc);
+		inc++;
 	}
 	free(ptr);
 	return (val);
