@@ -8,6 +8,8 @@
  *
  * @new_size: Data type
  *
+ * @ptr: Data type
+ *
  * Return: 0
  */
 
