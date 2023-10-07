@@ -58,11 +58,53 @@ void err(void)
  *
  * Return: 0
  */
-int main(void)
+int main(int argc, char *argv[])
 {
-	int argc;
-	char *argv[];
 	char *c1;
 	char *c2;
+	int val1, val2, sum, inc, carry, d1, d2, *output, b = 0;
 
+	c1 = argv[1];
+	c2 = argv[2];
+	if (argc != 3 || !digit(c1) || !digit(c2))
+	{
+		err();
+	}
+	val1 = lenVal(c1);
+	val2 = lenVal(c2);
+	sum = val1 + val2 + 1;
+	output = malloc(sizeof(int) * sum);
+	if (!output)
+		return (1);
+	while (inc <= sum - 1)
+	{
+		output[inc] = 0;
+		inc++;
+	}
+	for (val1 = val1 - 1; val1 >= 0; val1--)
+	{
+		d1 = c1[val1] - '0';
+		carry = 0;
+		for (val2 = lenVal(c2) - 1; val2 >= 0; val2--)
+		{
+			d2 = c2[val2] - '0';
+			carry += output[val1 + val2 + 1] + (d1 * d2);
+			output[sum] = carry % 10;
+			carry /= 10;
+		}
+		if (carry > 0)
+			output[sum] += carry;
+	}
+	while (inc < sum - 1)
+	{
+		if (output[inc])
+			b = 1;
+		if (b)
+			_putchar(output[inc] + '0');
+	}
+	if (!b)
+		_putchar('0');
+	_putchar('\n');
+	free(output);
+	return (0);
 }
