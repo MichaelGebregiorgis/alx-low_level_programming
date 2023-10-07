@@ -17,7 +17,7 @@ int digit(char *n)
 {
 	int inc = 0;
 
-	for (;n[inc]; inc++)
+	for (; n[inc]; inc++)
 	{
 		if (n[inc] < '0' || n[inc] > '9')
 		{
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 {
 	char *c1;
 	char *c2;
-	int val1, val2, sum, inc, carry, d1, d2, *output, b = 0;
+	int val1, val2, sum, inc = 0, carry, d1, d2, *output, b = 0;
 
 	c1 = argv[1];
 	c2 = argv[2];
