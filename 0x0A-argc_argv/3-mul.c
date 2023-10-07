@@ -30,7 +30,7 @@ int sti(char *c)
 			{
 				dig = -dig;
 			}
-			val *= 10 + dig;
+			val = val * 10 + dig;
 			e = 1;
 			if (c[inc + 1] < '0' || c[inc + 1] > '9')
 			{
