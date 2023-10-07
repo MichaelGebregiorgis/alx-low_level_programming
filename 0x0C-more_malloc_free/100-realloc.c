@@ -1,7 +1,8 @@
+#include <stdlib.h>
 #include "main.h"
-#include <stdio.h>
+
 /**
- * _realloc - reallocates a memory block
+ * *_realloc - reallocates a memory block
  *
  * @old_size: Data type
  *
@@ -19,36 +20,35 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	unsigned int inc = 0;
 
 	if (new_size == old_size)
-	{
 		return (ptr);
-	}
-	if (new_size == 0 && ptr != NULL)
-	{
+
+	if (new_size == 0 && ptr)
 		free(ptr);
 		return (NULL);
-	}
-	if (ptr == NULL)
+	if (!ptr)
 	{
 		return (malloc(new_size));
 	}
+
 	val = malloc(new_size);
-	if(val == NULL)
-	{
+	if (!val)
 		return (NULL);
-	}
-	if (old_size < new_size)
+	oldval = ptr;
+
+	if (new_size < old_size)
 	{
-		oldval = old_size;
+		while (inc < new_size)
+			val[inc] = oldval[inc];
+			inc++;
 	}
-	else
+
+	if (new_size > old_size)
 	{
-		oldval = new_size;
+		while (inc < old_size)
+			val[inc] = oldval[inc];
+			inc++;
 	}
-	while (inc < oldval)
-	{
-		*((char *)val + 1) = *((char *)ptr + inc);
-		inc++;
-	}
+
 	free(ptr);
 	return (val);
 }

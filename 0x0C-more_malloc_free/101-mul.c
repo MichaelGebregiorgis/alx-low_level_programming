@@ -60,4 +60,9 @@ void err(void)
  */
 int main(void)
 {
-	int 
+	int argc;
+	char *argv[];
+	char *c1;
+	char *c2;
+
+}
