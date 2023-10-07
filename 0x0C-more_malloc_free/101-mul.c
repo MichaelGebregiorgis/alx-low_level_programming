@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "main.h"
 int digit(char *n);
 int lenVal(char *n);
 void err(void);
