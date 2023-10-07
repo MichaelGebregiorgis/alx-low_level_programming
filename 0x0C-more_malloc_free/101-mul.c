@@ -14,11 +14,11 @@ void err(void);
  */
 int digit(char *n)
 {
-	int inc = 0;
+	int inc1 = 0;
 
-	for (; n[inc]; inc++)
+	for (; n[inc1]; inc1++)
 	{
-		if (n[inc] < '0' || n[inc] > '9')
+		if (n[inc1] < '0' || n[inc1] > '9')
 		{
 			return (0);
 		}
@@ -34,13 +34,13 @@ int digit(char *n)
  */
 int lenVal(char *n)
 {
-	int inc1;
+	int inc2;
 
-	while (n[inc1] != '\0')
+	while (n[inc2] != '\0')
 	{
-		inc1++;
+		inc2++;
 	}
-	return (inc1);
+	return (inc2);
 }
 /**
  * err - errors
