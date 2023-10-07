@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int digit(char *n);
+int lenVal(char *n);
+void err(void);
+
 /**
  * digit - digit checker
  *
