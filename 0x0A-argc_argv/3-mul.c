@@ -21,12 +21,12 @@ int sti(char *c)
 	{
 		if (c[inc] == '-')
 		{
-			++e;
+			++d;
 		}
 		if (c[inc] >= '0' && c[inc] <= '9')
 		{
 			dig = c[inc] - '0';
-			if (e % 2)
+			if (d % 2)
 			{
 				dig = -dig;
 			}
