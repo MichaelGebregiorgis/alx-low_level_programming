@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include "dog.h"
 
+char *cpy_data(char *dest, char *src);
+char *cpy_data(char *dest, char *src);
+
 /**
  * lenstrg - string length
  *
