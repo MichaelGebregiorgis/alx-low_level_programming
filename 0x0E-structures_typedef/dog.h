@@ -12,9 +12,9 @@
 
 struct dog
 {
-	char *owner;
 	char *name;
 	float age;
+	char *owner;
 };
  /**
   * dog_struc - Type
