@@ -59,7 +59,7 @@ char *cpy_data(char *dest, char *src)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dot_t *new_dog;
+	dog_t *new_dog;
 	int len, len1;
 
 	len = lenstrg(name);
