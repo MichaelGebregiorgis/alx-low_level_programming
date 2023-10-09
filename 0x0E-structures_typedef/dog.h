@@ -3,6 +3,7 @@
 
 /**
  * struct dog - data types
+ *
  * @name: Data type
  *
  * @age: Data type
