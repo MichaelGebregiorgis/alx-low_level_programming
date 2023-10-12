@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	n2 = atoi([3]);
 	res = argv[2];
 
-	if (!get_op_func(res))
+	if (get_op_func(res) == NULL ||res[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
