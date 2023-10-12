@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-
 /**
  * print_all - print anything
  *
@@ -14,7 +13,6 @@ void print_all(const char * const format, ...)
 	va_list lst;
 
 	va_start(lst, format);
-
 	if (format != NULL)
 	{
 		while (format[inc])
@@ -35,9 +33,7 @@ void print_all(const char * const format, ...)
 			{
 				str = va_arg(lst, char *);
 				if (str == NULL)
-				{
 					str = "(nil)";
-				}
 				printf("%s%s", separate, str);
 			}
 			else
