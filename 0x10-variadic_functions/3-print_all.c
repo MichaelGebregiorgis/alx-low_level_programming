@@ -32,14 +32,9 @@ void print_all(const char * const format, ...)
 			else if (format[inc] == 's')
 			{
 				str = va_arg(lst, char *);
-				if (str == NULL)
+				if (!str)
 					str = "(nil)";
 				printf("%s%s", separate, str);
-			}
-			else
-			{
-				inc++;
-				continue;
 			}
 			separate = ", ";
 			inc++;
