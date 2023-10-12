@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int n1;
 	int n2;
 	int val;
-	char *res;
+	char res;
 	int (*func)(int, int);
 
 	if (argc != 4)
