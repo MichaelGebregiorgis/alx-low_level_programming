@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	va_list lst;
 
 	va_start(lst, format);
-	if (format != NULL)
+	if (format)
 	{
 		while (format[inc])
 		{
