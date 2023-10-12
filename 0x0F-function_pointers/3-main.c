@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	n1 = atoi(argv[1]);
-	n2 = atoi([3]);
+	n2 = atoi(argv[3]);
 	res = *argv[2];
 	func = get_op_func(argv[2]);
 
