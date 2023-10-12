@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	}
 	n1 = atoi(argv[1]);
 	n2 = atoi(argv[3]);
-	res = argv[2];
+	res = *argv[2];
 	func = get_op_func(argv[2]);
 
 	if (!func)
