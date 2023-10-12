@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	{
 		if (inc == byte - 1)
 		{
-			printf("%02hhx\n" array[inc]);
+			printf("%02hhx\n", array[inc]);
 			break;
 		}
 		printf("%02hhx", array[inc]);
