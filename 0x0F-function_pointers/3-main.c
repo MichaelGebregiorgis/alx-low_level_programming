@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	else if ((res == '/' || res == '%') && n2 == 0)
+	if ((res == '/' || res == '%') && n2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
