@@ -22,15 +22,15 @@ list_t *add_node(list_t **head, const char *str)
 		inc++;
 	}
 	nwnd = malloc(sizeof(list_t));
-	if (new == NULL)
+	if (nwnd == NULL)
 	{
 		return (NULL);
 	}
 
-	new->str = strdup(str);
-	new->len = len;
-	new->next = (*head);
-	(*head) = new;
+	nwnd->str = strdup(str);
+	nwnd->len = inc;
+	nwnd->next = (*head);
+	(*head) = nwnd;
 
 	return (*head);
 }
