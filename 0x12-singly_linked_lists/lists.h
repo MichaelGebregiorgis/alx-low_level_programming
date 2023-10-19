@@ -11,6 +11,8 @@
  * @next: Data type
  */
 
+#include <stddef.h>
+
 typedef struct list_val
 {
 	char *str;
