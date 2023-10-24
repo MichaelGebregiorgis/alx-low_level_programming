@@ -7,7 +7,7 @@
 /**
  * struct listint_s - link
  *
- * n: Data type
+ * @n: Data type
  *
  * @next: Data type
  *
