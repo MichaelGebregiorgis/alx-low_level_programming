@@ -1,22 +1,22 @@
 #include "lists.h"
 
 /**
- * listint)len - prints all the elements of a listint_t list
+ * print_listint - prints all the elements of a listint_t list
  *
- * @a: Data type
+ * @h: Data type
  *
  * Return: node element
  */
 
-size_t listint_len(const listint_t *h)
+size_t print_listint(const listint_t *h)
 {
 	size_t val = 0;
 
-	while (a != NULL)
+	while (h != NULL)
 	{
-		printf("%d\n", a->n);
+		printf("%d\n", h->n);
 		val++;
-		a = a->next;
+		h = h->next;
 	}
 	return (val);
 }
