@@ -58,7 +58,7 @@ char *crt_buffer(char *file)
 int main(int argc, char *argv[])
 {
 	int rd, wrt, frm, to;
-	char buffer;
+	char *buffer;
 
 	if (argc != 3)
 	{
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 	}
 	buffer = crt_buffer(argv[2]);
 	frm = open(argv[1], O_RDONLY);
-	rd = (frm, buffer, 1024);
+	rd = read(frm, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
@@ -80,12 +80,12 @@ int main(int argc, char *argv[])
 		wrt = write(to, buffer, rd);
 		if (to == -1 || wrt == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", arg[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
 		rd = read(frm, buffer, 1024);
-		to = open(ardv[2], O_WRONLY | O_APPEND);
+		to = open(argv[2], O_WRONLY | O_APPEND);
 	} while (rd > 0);
 	free(buffer);
 	file_close(frm);
