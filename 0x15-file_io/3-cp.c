@@ -18,7 +18,7 @@ void file_close(int desc)
 
 	if (cls == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close desc %d\n", desc);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", desc);
 		exit(100);
 	}
 }
