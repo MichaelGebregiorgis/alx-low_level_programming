@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 	do {
 		if (rd == -1 || frm == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
