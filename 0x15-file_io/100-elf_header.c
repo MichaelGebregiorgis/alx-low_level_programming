@@ -10,7 +10,7 @@ void print_data(unsigned char *idnt);
 void print_version(unsigned char *idnt);
 void print_abi(unsigned char *idnt);
 void print_osabi(unsigned char *idnt);
-void print_type(unsigned int *type, *idnt);
+void print_type(unsigned int type, unsigned char *idnt);
 void print_entry(unsigned long int entry, unsigned char *idnt);
 void close_elf(int elf);
 
@@ -114,7 +114,7 @@ void print_data(unsigned char *idnt)
 	}
 	else
 	{
-		prinf("<unknown: %x>\n", idnt[EI_DATA]);
+		printf("<unknown: %x>\n", idnt[EI_DATA]);
 	}
 }
 
@@ -156,21 +156,13 @@ void print_osabi(unsigned char *idnt)
 		printf("UNIX - IRIX\n");
 	}
 	else if (idnt[EI_OSABI] == ELFOSABI_FREEBSD)
-	{
 		printf("UNIX - FreeBSD\n");
-	}
 	else if (idnt[EI_OSABI] == ELFOSABI_ARM)
-	{
 		printf("ARM\n");
-	}
 	else if (idnt[EI_OSABI] == ELFOSABI_STANDALONE)
-	{
 		printf("Standalone App\n");
-	}
 	else
-	{
 		printf("<unknown: %x>\n", idnt[EI_OSABI]);
-	}
 }
 
 /**
@@ -200,7 +192,7 @@ void print_version(unsigned char *idnt)
 
 void print_abi(unsigned char *idnt)
 {
-	printf("  ABI Version:                       %d\n", idnt[EI_ABIVERASION]);
+	printf("  ABI Version:                       %d\n", idnt[EI_ABIVERSION]);
 }
 
 /**
@@ -226,6 +218,63 @@ void print_type(unsigned int type, unsigned char *idnt)
 	{
 		printf("REL (Relocatable file)\n");
 	}
+	else if (type == ET_EXEC)
+	{
+		printf("EXEC (Executable file)\n");
+	}
+	else if (type == ET_CORE)
+	{
+		printf("CORE (Core file)\n");
+	}
+	else if (type == ET_DYN)
+	{
+		printf("DYN (Shared object file)\n");
+	}
+	else
+	{
+		printf("<unknown: %x>\n", type);
+	}
+}
+
+/**
+ * print_entry - entry point
+ *
+ * @entry: Data type
+ *
+ * @idnt: Data type
+ */
+
+void print_entry(unsigned long int entry, unsigned char *idnt)
+{
+	printf("  Entry point address:               ");
+	if (idnt[EI_DATA] == ELFDATA2MSB)
+	{
+		entry = ((entry << 8) & 0xFF00FF00) | ((entry >> 8) & 0xFF00FF);
+		entry = (entry << 16) | (entry >> 16);
+	}
+	if (idnt[EI_CLASS] == ELFCLASS32)
+	{
+		printf("%#x\n", (unsigned int)entry);
+	}
+	else
+	{
+		printf("%#lx\n", entry);
+	}
+}
+
+/**
+ * close_elf - Closes ELF
+ *
+ * @elf: Data type
+ */
+
+void close_elf(int elf)
+{
+	if (close(elf) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", elf);
+		exit(98);
+	}
 }
 
 /**
@@ -235,7 +284,7 @@ void print_type(unsigned int type, unsigned char *idnt)
  *
  * @argv: Data type
  *
- * Retuen: 0
+ * Return: 0
  */
 
 int main(int __attribute__((__unused__)) argc, char *argv[])
@@ -257,10 +306,25 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		exit(98);
 	}
 
-	check_elf(header->idnt);
+	rd = read(opn, header, sizeof(Elf64_Ehdr));
+	if (rd == -1)
+	{
+		free(header);
+		close_elf(opn);
+		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
+		exit(98);
+	}
+
+	check_elf(header->e_ident);
 	printf("ELF Header:\n");
-	print_magic(header->idnt);
-	print_class(header->idnt);
+	print_magic(header->e_ident);
+	print_class(header->e_ident);
+	print_data(header->e_ident);
+	print_version(header->e_ident);
+	print_osabi(header->e_ident);
+	print_abi(header->e_ident);
+	print_type(header->e_type, header->e_ident);
+	print_entry(header->e_entry, header->e_ident);
 
 	free(header);
 	close_elf(opn);
