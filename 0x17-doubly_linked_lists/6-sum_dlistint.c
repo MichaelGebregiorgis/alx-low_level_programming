@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * sum_dlistint - returns the sum of all the data (n) of a dlistint_t linked list
+ * sum_dlistint - returns sum of all the data (n) of a dlistint_t linked list
  *
  * @head: Data type
  *
