@@ -25,7 +25,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!valCpy)
 		return (0);
 	idx = key_index((const unsigned char *)key, ht->size);
-	inc = index;
+	inc = idx;
 	while (ht->array[inc])
 	{
 		if (strcmp(ht->array[inc]->key, key) == 0)
