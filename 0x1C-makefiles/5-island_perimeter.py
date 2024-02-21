@@ -9,8 +9,8 @@ def island_perimeter(grid):
     bound = 0
     size = 0
 
-    for h in range(height):
-        for w in range(width):
+    for h in range(hgt):
+        for w in range(wid):
             if grid[h][w] == 1:
                 size = size + 1
                 if (w > 0 and grid[h][w - 1] == 1):
